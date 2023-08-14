@@ -6,6 +6,7 @@ const Container = styled.div`
     height: 100vh;
     background-color: aqua;
 `;
+
 const Button = styled.div`
     border: 0;
     color: #fff;
@@ -15,9 +16,16 @@ const Button = styled.div`
     border-radius: 4px;
 `;
 
-function A() {
+export const A = ({currentRef}) => {
+
+    const onClicked = (e) => {
+        e.preventDefault();
+        currentRef.current.scrollIntoView({behavior: "smooth"});
+    };
+
   return (
     <Container>
+        <Button onClick={onClicked}>버튼버튼</Button>
     </Container>
   )
 }

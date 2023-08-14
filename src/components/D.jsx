@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "@emotion/styled";
+import { forwardRef } from 'react';
 
 const Container = styled.div`
     width: 100%;
@@ -7,10 +8,10 @@ const Container = styled.div`
     background-color: pink;
 `;
 
-function D() {
+export const D = forwardRef((props, ref) => {
   return (
-    <Container>B</Container>
-  )
-}
+    <Container ref={ref}>D</Container>
+  );
+});
 
 export default D;

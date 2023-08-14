@@ -3,13 +3,13 @@ import styled from "@emotion/styled";
 
 const Container = styled.div`
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     background-color: black;
 `;
 
-function C() {
+export const C = () => {
   return (
-    <Container>B</Container>
+    <Container>CC</Container>
   )
 }
 
